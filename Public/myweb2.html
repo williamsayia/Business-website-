@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>digitalSlice</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/myweb2.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="myweb2.css">
+        <link rel="stylesheet" href="css/style5.css">
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="js/swiper-bundle.min.js">
+        <script src="js/myweb2.js"></script>
+    </head>
+    <body>
+    <div class="hero">
+        <header class="header">
+            <div class="container">
+                 
+            <a class="logo" href="myweb2.html">
+                <span>
+                    <img src="assets/mylogo.png" class="hello">
+                </span>
+            </a>
+            <nav class="menu">
+                <div class="head">
+                    <button type="button" class="close-menu-btn"></button>
+                </div>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Solutions</a>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <ul class="sub-menu">
+                            <li><a href="about-slice.html#ContainerA"><span>SEO</span></a></li>
+                            <li class="dropdown">
+                                <a href="about-slice.html#Container4-Container7"><span>Digital Marketing</span></a>
+                            </li>
+                            <li><a href="about-slice.html#Container6"><span>Design</span></a></li>
+                            <li><a href="about-slice.html#Container8"><span>Email Marketing</span></a></li>
+                            <li class="dropdown">
+                                <a href="about-slice.html#Container9"><span>Web Development</span></a>    
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#Services">Services</a></li>
+                    <li class="dropdown">
+                        <a href="#Services">portfolio</a>
+
+                    </li>
+                    <li><a href="about-slice.html">About</a></li>
+                    <li><a href="#Contact">contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                
+                <button type="button" class="open-menu-btn">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                </button>
+            </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="text-box" id="home">
+        <h1>Drive growth, save time. Unlock your potential.</h1>
+        <p>Lets Work Together and Generate Explosive Returns</p>
+        <a href="about-slice.html" class="hero-btn">Visit Us to know More</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdowns = document.querySelectorAll('.dropdown > a, .dropdown .dropdown > a');
+        
+            dropdowns.forEach(function(dropdown) {
+                dropdown.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var parent = this.parentElement;
+                    
+                    // Toggle active class on the clicked dropdown
+                    parent.classList.toggle('active');
+        
+                    // Close other open dropdowns
+                    closeOtherDropdowns(parent);
+                });
+            });
+
+            function closeOtherDropdowns(currentDropdown) {
+                var allDropdowns = document.querySelectorAll('.dropdown');
+                allDropdowns.forEach(function(dropdown) {
+                    if (dropdown !== currentDropdown) {
+                        dropdown.classList.remove('active');
+                    }
+                });
+            }
+        });
+        </script>
+        
+    <!-----x-text------->
+   
+    <div class="row">
+        <div class="imgwrapper">
+                <img src="assets/stock.jpg" alt="" class="img">
+        </div>
+        <div class="contentWrapper">
+            <div class="content">
+                <span class="textWrapper">
+                    <span></span>Must To Know
+                </span>
+                <h2>Why You Should Hire A Digital Marketing Agency? </h2>
+                <p>With a good digital marketing agency by your side, you don’t have to worry about how your business/brand is projected online to your target audience.
+                   You can rest assured you’re adequately represented, and your customer base constantly increases.
+                   A digital marketing agency takes the entire stress off your shoulders and provides results that will take your company to the next level.
+                </p>
+                <a href="#Contact">GET A QUOTE</a>
+            </div>  
+        </div>
+    </div>
+
+    <!------count------>
+    <section class="first-section">
+        <div class="content1">
+            <h1>Lets Work Together</h1>
+            <p>We Deliver Results</p>
+        </div>
+    </section>
+    <section class="fluid1">
+        <div class="wrapper1">
+            <div class="container0">
+                <i class="fa-regular fa-file-lines" style="color: #FFD43B;"></i>
+                    <span class="num" data-val="26">000</span>
+                    <span class="text0">Projects Delivered</span>
+                </div>
+                <div class="container0">
+                    <i class="fa-solid fa-smile-beam" style="color: #FFD43B;"></i>
+                    <span class="num" data-val="21">000</span>
+                    <span class="text0">Happy Clients</span>
+                </div>
+                <div class="container0">
+                    <i class="fa-solid fa-headset" style="color: #FFD43B;"></i>
+                    <span class="num" data-val="1463">000</span>
+                    <span class="text0">Hours Of Support</span>
+                </div>
+                <div class="container0">
+                    <i class="fa-solid fa-users" style="color: #FFD43B;"></i>
+                    <span class="num" data-val="15">000</span>
+                    <span class="text0">Hard Workers</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="Services">
+            <div class="service-text">
+                <h1>Our Marketing Services</h1>
+                <p>At digitalSlice, we understand the unique challenges faced by small businesses and are committed to providing personalized marketing solutions that drive growth and success. Our comprehensive suite of services is designed to help small businesses establish a strong online presence, attract more visitors, and convert those visitors into loyal customers.</p>
+                <h2> Here's a detailed description of marketing services you might offer:</h2>
+            </div>
+            <div class="bottom-left">
+                <div class="section">
+                    <i class="fa-solid fa-envelopes-bulk fa-3x" style="color: #FFD43B;"></i>
+                    <div class="dm-text">
+                        <h1>Digital Marketing</h1>
+                        <p>Writing and editing, Research and<br>data analysis, Email Marketing,<br>Pay-per-click Advertising,<br>Automation.</p>
+                        <a href="about-slice.html#moresection" class="hero-button1">More</a>
+                    </div>
+                </div>
+                <div class="section">
+                    <i class="fa-solid fa-bullhorn fa-3x" style="color: #FFD43B;"></i>
+                    <div class="dm-text">
+                        <h1>Marketing Communications</h1>
+                        <p>Copywriting, Blogging, Content<br>translation, Social Media Marketing.</p>
+                        <a href="about-slice.html#moresection" class="hero-button1">More</a>
+                    </div>
+                </div>
+                <div class="section">
+                    <i class="fa-solid fa-wrench fa-3x" style="color: #FFD43B;"></i>
+                    <div class="dm-text">
+                        <h1>Search Engine Optimization</h1>
+                        <p>Conversion Rate Optimization (CRO), Link Building.</p>
+                        <a href="about-slice.html#moresection" class="hero-button1">More</a>
+                    </div>
+                </div>
+                <div class="section">
+                    <i class="fa-solid fa-crop-simple fa-3x" style="color: #FFD43B;"></i>
+                    <div class="dm-text">
+                        <h1>Design</h1>
+                        <p>E-commerce website, Business Website, Landing Page, UX and UI Design.</p>
+                        <a href="about-slice.html#moresection" class="hero-button1">More</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!----comment with slides---->
+    <div class="testimonials">
+
+        <div class="block">
+    
+            <h2>Testimonials</h2>
+            <h5>Why people love digitalSlice</h5>
+    
+        </div>
+    
+        <blockquote class="block">
+    
+            <p>"I've been consistently impressed with digitalSlice Solutions,
+                their team goes above and beyond to ensure that every project is executed flawlessly,from initial concept to final implementation."</p>
+    
+            <footer>
+                <cite><span>Alex McGee</span></cite>
+            </footer>
+    
+        </blockquote>
+    
+        <blockquote class="block">
+    
+            <p>"At our company, partnering with digitalSlice has been a game-changer. Their innovative solutions and dedicated team have seamlessly integrated with our operations, delivering tailored strategies that exceeded our expectations. "</p>
+    
+            <footer>
+                <cite><span>Melissa Washington</span></cite>
+            </footer>
+    
+        </blockquote>
+    
+        <blockquote class="block">
+    
+            <p>"I didn't even know where to start as far as advertising goes or how to reach peaople. DigitalSlice really made this part so easy and effective, thank you!"</p>
+    
+            <footer>
+                <cite><span>Joseph Salazar</span></cite>
+            </footer>
+    
+        </blockquote>
+    
+        <blockquote class="block">
+    
+            <p>"Working with digitalSlice has been a game-changer for our business. Their expertise in SEO and PPC has significantly boosted our online presence and increased our leads.</p>
+    
+            <footer>
+                <cite><span>Maria Douglas</span></cite>
+            </footer>
+    
+        </blockquote>
+    
+        <blockquote class="block">
+    
+            <p>"digitalSlice transformed our outdated website into a modern, user-friendly platform. Their design and development team exceeded our expectations, delivering a site that not only looks fantastic but also performs seamlessly across all devices."</p>
+    
+            <footer>
+                <cite><span>Gary Benham</span></cite>
+            </footer>
+    
+        </blockquote>				
+    
+    </div>
+
+    <!----submit---->
+    <section class="contactUs" id="Contact">
+        <div class="form-container">
+            <div class="text">Request Quote Now</div>
+            <form id="contactForm" class="contact-form">
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" id="username" name="username" required>
+                        <div class="underline"></div>
+                        <label for="username">Name</label>
+                    </div>
+                    <div class="input-data">
+                        <input type="email" id="email" name="email" required>
+                        <div class="underline"></div>
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" id="subject" name="subject" required>
+                        <div class="underline"></div>
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="input-data">
+                        <input type="text" id="websiteName" name="websiteName" required>
+                        <div class="underline"></div>
+                        <label for="websiteName">Business Name</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-data textarea">
+                        <textarea id="message" name="message" required></textarea>
+                        <div class="underline"></div>
+                        <label for="message">Message</label>
+                    </div>
+                </div>
+                <div class="form-row submit-btn">
+                    <div class="input-data">
+                        <div class="inner"></div>
+                        <input type="submit" class="submit" value="GET A QUOTE">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script>
+           document.getElementById('contactForm').addEventListener('submit', async function(event) {
+               event.preventDefault(); 
+           
+               const formData = new FormData(this); 
+           
+               try {
+                   const response = await fetch('/send', { 
+                       method: 'POST',
+                       body: new URLSearchParams(formData)
+                   });
+           
+                   if (!response.ok) {
+                       throw new Error('Network response was not ok');
+                   }
+           
+                   const result = await response.text(); // Use text() for plain text responses
+                   console.log(result);
+                   alert('Your request has been submitted successfully!');
+                } catch (error) {
+                    console.error('There was a problem with the fetch operation:', error);
+                    alert('There was an error submitting your request. Please try again.');
+                }
+            });           
+        </script>
+    </section>
+        <footer class="footer">
+            <div class="container3">
+                <div class="row2">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <p>
+                          digitalSlice is a team of passionate professionals who excel in 
+                          the fields of digital marketing, web design, and development. 
+                          Our mission is to help businesses of all sizes harness the power
+                          of the internet to achieve their goals. With years of experience 
+                          and a track record of success, we are your trusted partner in the ever-evolving digital landscape.
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="about-slice.html">Search Engine Optimization</a></li>
+                            <li><a href="about-slice.html">Pay Per Click Management</a></li> 
+                            <li><a href="about-slice.html">Conversion Rate Optimizarion</a></li>
+                            <li><a href="about-slice.html">Design</a></li>
+                            <li><a href="about-slice.html">Web Development</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Get In Touch</h4>
+                        <div class="Reach-Us">
+                            <ul>
+                                <a href="#"><i class="fa-solid fa-square-envelope"></i></a>
+                                <span class="Email">sliceTech@gmail.com</span>
+                            </ul> 
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </footer>
+       <div class="footer-bottom">
+        <p>Copyright &copy;2024 digitalSlice. designed by <span>digitalSlice</span></p>
+       </div>
+    
+       <div class="whatsapp-btn-container">
+        <a class="whatsapp-btn" href="https://wa.me/254705791582"><i class="fab fa-whatsapp"></i></a>
+        <span>Contact Us</span>
+       </div>
+    
+    </body>
+    
+</html>

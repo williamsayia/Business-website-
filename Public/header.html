@@ -1,0 +1,76 @@
+
+    <header class="header">
+        <div class="container">
+            <a class="logo" href="myweb2.html">
+                <span>
+                    <img src="assets/mylogo.png" class="hello">
+                </span>
+            </a>
+            <nav class="menu">
+                <div class="head">
+                    <button type="button" class="close-menu-btn"></button>
+                </div>
+                <ul>
+                    <li><a href="myweb2.html#home">home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Solutions</a>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <ul class="sub-menu">
+                            <li><a href="about-slice.html"><span>SEO</span></a></li>
+                            <li class="dropdown">
+                                <a href="#"><span>Digital Marketing</span></a>
+                            </li>
+                            <li><a href="#"><span>Design</span></a></li>
+                            <li><a href="#"><span>Email Marketing</span></a></li>
+                            <li class="dropdown">
+                                <a href="#"><span>Web Development</span></a>    
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="myweb2.html#Services">Services</a></li>
+                    <li class="dropdown">
+                        <a href="#">portfolio</a>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        
+                    </li>
+                    <li><a href="about-slice.html">About</a></li>
+                    <li><a href="myweb2.html#contact">contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                
+                <button type="button" class="open-menu-btn">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                </button>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var dropdowns = document.querySelectorAll('.dropdown > a, .dropdown .dropdown > a');
+            
+                dropdowns.forEach(function(dropdown) {
+                    dropdown.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        var parent = this.parentElement;
+                        
+                        // Toggle active class on the clicked dropdown
+                        parent.classList.toggle('active');
+            
+                        // Close other open dropdowns
+                        closeOtherDropdowns(parent);
+                    });
+                });
+    
+                function closeOtherDropdowns(currentDropdown) {
+                    var allDropdowns = document.querySelectorAll('.dropdown');
+                    allDropdowns.forEach(function(dropdown) {
+                        if (dropdown !== currentDropdown) {
+                            dropdown.classList.remove('active');
+                        }
+                    });
+                }
+            });
+            </script>
+    </header>

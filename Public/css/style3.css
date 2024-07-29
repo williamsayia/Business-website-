@@ -1,0 +1,545 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+.header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px;
+    z-index: 10;
+    background-color: #24262b;
+}
+.header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.header .logo {
+    font-size: 1.7em;
+    display: flex;
+    align-items: center;
+}
+
+.hello {
+    max-height: 90px; /* Adjust the height as needed */
+    width: auto;
+    background-color: none;
+}
+ul li{
+    list-style: none;
+}
+.header .menu .head{
+    display: none;
+}
+.head .menu ul{
+    list-style: none;
+}
+.header .menu > ul > li{
+    display: inline-block;
+}
+.header .menu > ul > li:not(:last-child){
+    margin-right: 40px;
+}
+.header .menu .dropdown{
+    position: relative;
+}
+.header .menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+ 
+    color: white;
+    line-height: 1.5;
+    display: block;
+}
+.header .menu > ul > li > a{
+    padding: 24px 0;
+}
+.header .menu > ul > .dropdown > i {
+    color: rgba(3, 16, 13, 0.667); /* Change 'red' to your desired color */
+}
+.header .menu .sub-menu .dropdown > i {
+    color: white; /* Change 'red' to your desired color */
+}
+.header .menu > ul > li:hover > a{
+    color:orange;
+}
+.header .menu .sub-menu > li:hover > a {
+    color: orange; /* Change 'blue' to your desired hover color */
+}
+
+.header .menu > ul > .dropdown > a{
+    padding-right: 15px;
+}
+.header .menu i{
+    font-size: 10px;
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    color: black;
+    top: calc(50% - 5px);
+}
+.header .menu > ul > li > i{
+    right: 0;
+}
+.header .menu .sub-menu a{
+    text-transform: capitalize;
+}
+.header .menu .sub-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 230px;
+    padding: 15px 0;
+    background-color: black;
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.5);
+    z-index: 1;
+    transform-origin: top;
+    transform: scale(0);
+    visibility: hidden;
+    opacity: 0;
+}
+.header .menu .sub-menu-right{
+    left: 100%;
+    top: 0;
+}
+.header .menu .sub-menu-left{
+    top: 0;
+    left: auto;
+    right: 100%;
+}
+.header .menu li:hover > .sub-menu{
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition: all 0.5s ease;
+}
+/* General styles for dropdown menu */
+.dropdown .sub-menu,
+.dropdown .sub-menu-right {
+    display: none; /* Hide sub-menus by default */
+    position: absolute;
+    background-color: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    z-index: 1000;
+}
+
+/* Styles for sub-menu items */
+.sub-menu li,
+.sub-menu-right li {
+    padding: 2px;
+}
+
+/* Active state for dropdown in mobile view */
+.dropdown.active > .sub-menu,
+.dropdown.active > .sub-menu-right,
+.dropdown .dropdown.active > .sub-menu,
+.dropdown .dropdown.active > .sub-menu-right {
+    display: block;
+}
+
+/* Media query to disable hover effect on desktop view */
+@media (min-width: 768px) {
+    .dropdown:hover > .sub-menu,
+    .dropdown:hover > .sub-menu-right,
+    .dropdown .dropdown:hover > .sub-menu,
+    .dropdown .dropdown:hover > .sub-menu-right {
+        display: block; /* Show sub-menus on hover for desktop */
+    }
+    .menu .sub-menu li:hover {
+        background-color: none; /* Change this color as needed */
+    }
+   
+}
+
+
+.header .menu .sub-menu a{
+    padding: 6px 24px;
+}
+.header .menu .sub-menu .dropdown > a{
+    padding-right: 34px;
+}
+.header .menu .sub-menu span{
+    background-image: linear-gradient(black, hsla(0, 0%, 100%, 0.406));
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.5s ease;
+}
+
+.header .menu .sub-menu i{
+    transform: rotate(-90deg);
+    right: 24px;
+}
+.header-right{
+    display: flex;
+}
+.header-right > *{
+    margin-left: 25px;
+}
+.header-right .icon-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+.header-right .open-menu-btn{
+    display: none;
+}
+@media(max-width:990px){
+    .header{
+        padding: 12px 0;
+    }
+    .header .menu{
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 320px;
+        height: 100%;
+        background-color: black;
+        padding: 15px 30px 30px;
+        overflow-y: auto;
+        z-index: 1;
+        transform: translateX(100%);
+    }
+    .header .menu.open{
+        transform: none;
+    }
+    .header .menu .head{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+    .header .menu .close-menu-btn{
+        height: 35px;
+        width: 35px;
+        background-color: rgba(255,255,255,0.5);
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: transparent;
+    }
+    .header .menu .close-menu-btn::before,
+    .header .menu .close-menu-btn::after{
+        content: '';
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        background-color: rgba(3, 16, 13, 0.667);
+    }
+    .header .menu .close-menu-btn::before{
+        transform: rotate(45deg);
+    }
+    .header .menu .close-menu-btn::after{
+        transform: rotate(-45deg);
+    }
+    .header .menu > ul > li{
+        display: block;
+    }
+    .header .menu > ul > li:not(:last-child){
+        margin-right: 0;
+    }
+    .header .menu li{
+        border-bottom: 1px solid hsla(0, 0%, 100%, 0.25);
+    }
+    .header .menu li:first-child{
+        border-top: 1px solid hsla(0, 0%, 100%, 0.25);
+    }
+    .header .menu > ul > li > a{
+        padding: 12px 0;
+    }
+    .header .menu > ul > .dropdown > a{
+        padding-right: 34px;
+    }
+    .header .menu i{
+        height: 34px;
+        width: 34px;
+        border: 1px solid hsla(0, 0%, 100%, 0.25);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: auto;
+        cursor: pointer;
+        top: 7px;
+    }
+    .header .menu .dropdown.active > i{
+        background-color: hsla(0, 0%, 100%, 0.25);
+        transform: rotate(180deg);
+    }
+    .header .menu .sub-menu{
+        position: static;
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+        padding: 0;
+        transition: none;
+        box-shadow: none;
+        width: 100%;
+        display: none;
+    }
+    .header .menu .dropdown.active > .sub-menu{
+        display: block;
+    }
+    .header .menu .sub-menu li:last-child{
+        border: none;
+    }
+    .header .menu .sub-menu a{
+        padding: 12px 0 12px 15px;
+    }
+    .header .menu .sub-menu .sub-menu a{
+        padding-left: 30px;
+    }
+    .header .menu .sub-menu .sub-menu .sub-menu a{
+        padding-left: 45px;
+    }
+    .header .menu .sub-menu span{
+        background-image: none;
+    }
+    .header .menu .sub-menu i{
+        transform: none;
+        right: 0;
+    }
+    .header-right .open-menu-btn{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 42px;
+        cursor: pointer;
+        position: relative;
+        background-color: rgba(255,255,255,0.1);
+        border: none;
+    }
+    .header-right .open-menu-btn .line{
+        height: 2px;
+        width: 30px;
+        background-color: rgba(3, 16, 13, 0.667);
+        position: absolute;
+    }
+    
+    .header-right .open-menu-btn .line-1{
+        transform: translateY(-8px);
+    }
+    .header-right .open-menu-btn .line-3{
+        transform: translateY(8px);
+    }
+}
+.header-right .open-menu-btn:hover .line {
+    background-color: orange; /* Change to your desired hover color */
+}
+.header-right .open-menu-btn:focus .line {
+    background-color: blue; /* Adjust to desired color */
+}
+
+/* Define active effect for mobile (when tapped) */
+.header-right .open-menu-btn:active .line {
+    background-color: blue; /* Adjust to desired color */
+}
+
+/*footer section*/
+.container3{
+	max-width: 1170px;
+	margin:auto;
+}
+.row2{
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col p{
+    color: #bbbbbb;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+    font-size: 18px; /* Adjust font size to fit icon within circle */
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+.Email {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.Email:hover {
+    color: #FFD43B; /* Change to your desired hover color */
+}
+
+.footer-col a {
+    margin-right: 10px; /* Adjust this value to set the spacing */
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.footer-col .Reach-Us a{
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+.footer-bottom {
+    background: #ffffff;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    margin: 0; /* Ensure no extra space */
+    padding: 0; /* Ensure no extra space */
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-weight: 200;
+}
+
+/*whatsapp button*/
+.whatsapp-btn-container {
+    position: fixed;
+    right: 30px;
+    opacity: 0;
+    bottom: -50px;
+    padding: 24px;
+    animation: fade-up 1000ms forwards;
+    animation-delay: 1000ms;
+}
+
+@keyframes fade-up {
+    100% {
+        bottom: 24px;
+        opacity: 1;
+    }
+}
+
+.whatsapp-btn-container .whatsapp-btn {
+    font-size: 48px;
+    color: #FFD43B;
+    display: inline-block;
+    transition: all 400ms;
+}
+
+.whatsapp-btn-container .whatsapp-btn:hover {
+    transform: scale(1.2);
+}
+
+.whatsapp-btn-container span {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: #FFD43B;
+    transform: rotateZ(20deg) translateX(10px);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+.whatsapp-btn-container .whatsapp-btn:hover + span {
+    transform: rotateZ(0deg) translateX(0px);
+    opacity: 1;
+}

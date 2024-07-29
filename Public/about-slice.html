@@ -1,0 +1,239 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300&display=swap" rel="stylesheet">
+    <title></title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style3.css">
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+    <script src="js/script3.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdowns = document.querySelectorAll('.dropdown > a, .dropdown .dropdown > a');
+        
+            dropdowns.forEach(function(dropdown) {
+                dropdown.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var parent = this.parentElement;
+                    
+                    // Toggle active class on the clicked dropdown
+                    parent.classList.toggle('active');
+        
+                    // Close other open dropdowns
+                    closeOtherDropdowns(parent);
+                });
+            });
+
+            function closeOtherDropdowns(currentDropdown) {
+                var allDropdowns = document.querySelectorAll('.dropdown');
+                allDropdowns.forEach(function(dropdown) {
+                    if (dropdown !== currentDropdown) {
+                        dropdown.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+  
+    <div class="responsive-container-block1">
+        <div class="responsive-container-block Container">
+          <img class="mainImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/eaboutus1.svg">
+          <div class="allText aboveText">
+            <p class="text-blk headingText">
+              Who Are We?
+            </p>
+            <p class="text-blk subHeadingText">
+                Small Business Marketing Strategies and Ideas
+            </p>
+            <p class="text-blk description">
+                We are a small business marketing agency helping you deliver creative ways to market your business. A dynamic team of creatives comprised of marketing, design, web development, and business development professionals.
+            </p>
+            <a href="myweb2.html#Contact">
+              <button class="explore">
+                Get Quote
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    <div class="Image-Container">
+      <img src="assets/imagecontainer.jpg" class="unsplash">
+      <div class="overlay-text"><pre>Great<br><font color="red">marketing</font><br>solves marketing problems<br>Great marketing<br>agencies<br>solve <font color="red">business</font> problems</pre></div>
+    </div>
+    <section>
+      <div class="rules">
+        <h2 class="section-heading">Our Rules</h2>
+      </div>
+      <div class="rules">
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-hammer"></i>
+            </div>
+            <h3>Rule#1</h3>
+            <p class="p2">
+              If we can't become as enthusiastic about your business as you are, we won't accept you as a client.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-brush"></i>
+            </div>
+            <h3>Rule#2</h3>
+            <p class="p2">
+              If we feel we can't make a meaningful difference over what you're already doing, we won't accept you as a client.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-wrench"></i>
+            </div>
+            <h3>Rule#3</h3>
+            <p class="p2">
+              If we feel we would be too much of a drain on your finances, we won't accept you as a client.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+      <div class="container4" id="moresection">
+        <div class="timeline">
+          <div class="heading2">
+            <div class="col-lg-12 text-center">
+                <h5 class="section-heading">What We Do</h5>
+                <h3 class="section-subheading text-muted"></h3>
+            </div>
+          </div>
+          <ul>
+            <li>
+              <div class="timeline-content" >
+                <h1>Search Engine Optimization</h1>
+                <p> Many businesses depend on their website appearing high up on search results. 
+                    Google takes into consideration around 200 factors when assessing a site,
+                    to determine how high it will rank against search criteria.
+                    Do you really want to keep up with current SEO best-practices such as user search intent,
+                    keyword research, competitor analysis, schema.org markup, canonical declarations, and so on?
+                    Partner with us and We'll develop an online success strategy to ensure SEO efforts result in 
+                    better search engine results for your business, product, or service.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h1>Design</h1>
+                <p> Engaging web design built upon user experience strategy that 
+                    responds to its environment and user behaviour offering an optimized
+                    UX/UI design and browsing experience for all devices.
+                    Whether it’s WordPress or any other Open Source platform, 
+                    our web design and development services are backed by robust e-Commerce 
+                    development to support small business growth.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content" id="Container7">
+                <h1>Digital Marketing</h1>
+                <p>Choose our digital marketing services because we blend innovation with strategy 
+                    to deliver unparalleled results. Our team of experts is dedicated to crafting 
+                    customized marketing solutions that drive engagement, boost conversions, and grow your business.
+                    With a proven track record of success, state-of-the-art tools, and a client-first approach, 
+                    we turn your digital presence into a powerful asset. Trust us to elevate your brand and achieve your marketing goals with precision and creativity
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h1>Email Marketing</h1>
+                <p>Email marketing influences the buying decisions of 50.7% of customers.
+                    Need help crafting emails that target new customers, re-market your business 
+                    to existing ones & persuade readers to take action?
+                    Emails include: A benefits-focused email header and an informative pre-header,
+                    Email personalization and body text that's compelling and resonates with your audience,
+                    A description that includes the benefits of your offer or product with a link,
+                    A clear call to action (CTA)
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h1>Pay Per Click Advertising</h1>
+                <p>
+                  Having our PPC advertising team, we continually optimize and 
+                  work to ensure that those who are looking for your products and services will find you.
+                  Applying cohesive strategies across your website and campaigns helps generate and nurture 
+                  your lead funnel through the entire buyer's journey.Our PPC strategists focus on increasing total 
+                  sales and profitability within the PPC platform.
+                </p>
+              </div>
+            </li>
+            <li>
+                <div class="timeline-content" id="Container9">
+                  <h1>Interactive ChatBots</h1>
+                  <p>A chatbot is an AI-powered software application that simulates human-like 
+                    conversations with users through text or voice interactions.
+                    In today's digital age, businesses are increasingly leveraging technology to
+                    enhance customer engagement and streamline operations. One such innovative 
+                    technology is the chatbot. At SliceTech, we offer comprehensive chatbot services 
+                    designed to revolutionize how businesses interact with their customers online.
+                </p>
+                </div>
+              </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <section class="clients">
+        <div class="container8">
+          <h1>Our Clients</h1><hr/>
+          <div class="client">
+          <ul>
+            <li>
+              <img src="wordpress-2.png" alt="client1">
+              <img src="https://cdn.pixabay.com/photo/2017/01/31/23/42/animal-2028258__340.png" alt="client1">
+            </li>
+            <li>
+              <img src="https://cdn.pixabay.com/photo/2020/04/24/10/56/music-5086395__340.png" alt="client2">
+              <img src="https://cdn.pixabay.com/photo/2018/04/11/20/12/silhouette-3311639__340.png" alt="client2">
+            </li>
+            <li>
+              <img src="https://cdn.pixabay.com/photo/2017/02/01/11/30/cap-2029798__340.png" alt="client3">
+              <img src="https://cdn.pixabay.com/photo/2014/04/03/10/02/graduation-309661__340.png" alt="client3">
+            </li>
+            <li>
+              <img src="https://cdn.pixabay.com/photo/2020/06/24/05/23/tree-5334773__340.png" alt="client4">
+              <img src="https://cdn.pixabay.com/photo/2020/06/24/05/29/tree-5334823__340.png" alt="client4">
+            </li>
+          </ul>
+        </div>
+        </div>
+      </section>
+      
+    <!-- In your main HTML files -->
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
